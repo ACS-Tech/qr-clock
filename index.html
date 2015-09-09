@@ -26,7 +26,9 @@
 <script>
 function refreshClock()
 {
-document.getElementById("clock").innerHTML = "<img src='http://qrfree.kaywa.com/?l=1&s=8&d=" + Date() +"'>";
+var x = Date();
+var y = x.slice(7, 22)
+document.getElementById("clock").innerHTML = "<img src='http://qrfree.kaywa.com/?l=1&s=8&d=" + y +"'>";
 }
 
 window.setInterval(refreshClock, 2000);
