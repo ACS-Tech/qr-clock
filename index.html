@@ -24,8 +24,12 @@
     
     <center><div id="clock"></center>
 <script>
+function refreshClock()
+{
 document.getElementById("clock").innerHTML = "<img src='http://qrfree.kaywa.com/?l=1&s=8&d=" + Date() +"'>";
+}
 
+window.setInterval(refreshClock, 1000);
 </script>
 
 
