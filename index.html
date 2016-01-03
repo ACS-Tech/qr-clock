@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-
+    <script src="/jquery.js">
     <title>QR Clock by ACS-Tech</title>
   </head>
 
@@ -21,14 +21,14 @@
 
     <div class="container">
       <section id="main_content">
-    
+
     <center><div id="clock"></center>
 <script>
 function refreshClock()
 {
 var x = Date();
 var y = x.slice(4, 25)
-document.getElementById("clock").innerHTML = "<img src='http://qrfree.kaywa.com/?l=1&s=8&d=" + y +"'>";
+jquery('clock').qrcode(y);
 }
 
 window.setInterval(refreshClock, 2000);
@@ -38,6 +38,6 @@ window.setInterval(refreshClock, 2000);
       </section>
     </div>
 
-    
+
   </body>
 </html>
