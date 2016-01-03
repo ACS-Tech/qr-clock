@@ -29,6 +29,7 @@ function refreshClock()
 {
 var x = Date();
 var y = x.slice(4, 25)
+document.getElementById("clock").innerHTML= ""; 
 jQuery('#clock').qrcode(y);
 }
 
