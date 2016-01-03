@@ -29,7 +29,7 @@ function refreshClock()
 {
 var x = Date();
 var y = x.slice(4, 25)
-jquery('#clock').qrcode(y);
+jQuery('#clock').qrcode(y);
 }
 
 window.setInterval(refreshClock, 2000);
