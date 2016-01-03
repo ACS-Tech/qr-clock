@@ -6,7 +6,8 @@
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <script src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
     <title>QR Clock by ACS-Tech</title>
   </head>
 
@@ -28,7 +29,7 @@ function refreshClock()
 {
 var x = Date();
 var y = x.slice(4, 25)
-jquery('clock').qrcode(y);
+jquery('#clock').qrcode(y);
 }
 
 window.setInterval(refreshClock, 2000);
