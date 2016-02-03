@@ -27,22 +27,44 @@
     <center>
       <br><br><br><br><br>
 
-      <div id="clock"></div>
+      <div id="clock" onclick="toggleText()"></div>
 
-      <br><br><br><br><br>
+      <br><br>
 
-    <div id="info">
+        <p id="time"></p>
+
+      <br><br>
+
+    <!-- <div id="info">
       <h1>QR Clock</h1>
       <h2>The QR code clock.  Powered by JavaScript.</h2>
-    </div>
+    </div> -->
 
     </center>
 <script>
+var textToggled = false;
+
+function toggleText()
+{
+  textToggled = !textToggled;
+  if (textToggled == false)
+  {
+    document.getElementById("time").innerHTML= "";
+  }
+  refreshClock()
+}
+
 function refreshClock()
 {
 var x = Date();
 var y = x.slice(4, 25)
 document.getElementById("clock").innerHTML= "";
+
+if (textToggled == true)
+{
+  document.getElementById("time").innerHTML= y;
+}
+
 // jQuery('#clock').qrcode("http://acs-tech.github.io/qr-clock/ " + "Time is " + y);
 jQuery('#clock').qrcode("Time is " + y);
 }
