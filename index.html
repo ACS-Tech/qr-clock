@@ -13,7 +13,7 @@
     <div class="container">
       <section id="main_content">
 <div align="center">
-      <div id="clock" onclick="toggleText()" style="width: 400; height: 400"></div>
+      <div id="clock" onclick="toggleText()" style="width: 600; height: 600"></div>
 
 <br><br>
  <p id="time"></p>
@@ -45,7 +45,7 @@ if (textToggled == true)
 
 // jQuery('#clock').qrcode("http://acs-tech.github.io/qr-clock/ " + "Time is " + y);
 //jQuery('#clock').qrcode("Time is " + y);
-jQuery('#clock').qrcode({width: 400,height: 400,text: "Time is " + y});
+jQuery('#clock').qrcode({width: 600,height: 600,text: "Time is " + y});
 }
 
 window.setInterval(refreshClock, 500);
