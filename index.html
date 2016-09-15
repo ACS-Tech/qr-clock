@@ -19,8 +19,6 @@ position: absolute;
 top: 50%;
 left: 50%;
 margin: -70px 0 0 -170px;
-height: 400px;
-width: 400px;
 line-height: 200px;
 transform: translateY(100%);"></div>
 
@@ -52,7 +50,8 @@ if (textToggled == true)
 }
 
 // jQuery('#clock').qrcode("http://acs-tech.github.io/qr-clock/ " + "Time is " + y);
-jQuery('#clock').qrcode("Time is " + y);
+//jQuery('#clock').qrcode("Time is " + y);
+jQuery('#clock').qrcode({width: 400,height: 400,text: "Time is " + y});
 }
 
 window.setInterval(refreshClock, 500);
